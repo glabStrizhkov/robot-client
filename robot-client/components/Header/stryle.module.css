@@ -1,0 +1,76 @@
+
+.NavBarPositionBlock {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.nav {
+    display: grid;
+    grid-auto-columns: max-content;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav a {
+    text-decoration: none;
+    display: block;
+    color: #222;
+}
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+.topmenu > li > a {
+    position: relative;
+    padding: 25px 30px 5px 30px;
+    font-family: 'Lora',Arial,sans-serif;
+    font-size: 16px;
+    /*font-size: 1.5em;*/
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 120%;
+    width: max-content;
+    padding: 15px 0 15px;
+    margin-top: 10px;
+    background: white;
+    border-radius: 0;
+    /*box-shadow: 0 0 30px rgba(0,0,0,.2);*/
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: .500ms;
+}
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.topmenu li:hover {
+    border: none;
+    border-bottom: 0.8px solid #807676;
+}
+.submenu a {
+    font-family: 'Lora',Arial,sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding: 5px 10px;
+    transition: .500ms linear;
+}
+.submenu li:hover {
+    border: none;
+    border-bottom: 0.8px solid #807676;
+}
